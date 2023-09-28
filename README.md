@@ -1,12 +1,11 @@
-# roubank-angular
+# WatchZa-angular
 
-Este projeto tem como objetivo implementar progressivamente e de forma didática uma aplicação web inspirada em operações comuns de instituições financeiras (ex: saque, depósito, extrato, saldo, cadastro), sendo o diferencial, a cobrança de taxas de forma abusiva para cada operação realizada pelo cliente.
+Este projeto tem como objetivo implementar um registro de filmes assistidos pelo respectivo usuário
 
-O frontend da aplicação foi desenvolvido com Angular e o backend foi simulado pela implementação de uma API Fake, usando o JSON Server.
 
 ## Endereço de Deploy - GitHub Pages
 
-https://utfpr-gp.github.io/roubank-app/
+// A ser implementado
 
 ## Protótipo
 
@@ -14,8 +13,8 @@ https://www.figma.com/file/Ot0L2kbO1I4zhn5OQWKPAd/Projeto-filmes?type=design&nod
 
 ## Checklist
 #### RA1 - Prototipar e projetar interfaces gráficas de usuário, considerando princípios de usabilidade e experiência do usuário.
-- [ ] ID1: O aluno desenvolveu protótipos de interfaces que demonstram compreensão das diretrizes de usabilidade.
-- [ ] ID2: O aluno projetou interfaces responsivas que se adaptam a diferentes tamanhos de tela.
+- [x] ID1: O aluno desenvolveu protótipos de interfaces que demonstram compreensão das diretrizes de usabilidade.
+- [x] ID2: O aluno projetou interfaces responsivas que se adaptam a diferentes tamanhos de tela.
 #### RA2 - Criar e reutilizar componentes em frameworks frontend, desenvolvendo interfaces modulares, responsivas e estilizadas.
 - [ ] ID3: O aluno desenvolveu componentes reutilizáveis que são aplicáveis em diferentes contextos da aplicação, garantindo que se adaptem de maneira responsiva em vários tamanhos de tela.
 - [ ] ID4: O aluno incorporou componentes de frameworks CSS para aprimorar a aparência e funcionalidade da aplicação de maneira consistente.
