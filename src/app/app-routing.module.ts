@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NavbarComponent } from './navbar/navbar.component';
+import { MovieListComponent } from './movie-list/movie-list.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const routes: Routes = [
-  { path: 'navbar-component', component: NavbarComponent},
-  
+  { path: 'movie-list', component: MovieListComponent},
+  { path: '', component: LandingPageComponent},
 ];
 
 @NgModule({
