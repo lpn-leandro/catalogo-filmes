@@ -9,10 +9,12 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSliderModule} from '@angular/material/slider';
+import { NavbarComponent } from './navbar/navbar.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
 
   ],
   imports: [
