@@ -1,0 +1,41 @@
+  mat-slider {
+    width: 100%;
+  }
+  
+  .cadastro {
+    width: 100%;
+  }
+
+  .example-additional-selection {
+    opacity: 0.75;
+    font-size: 0.75em;
+  }
+
+.coluna1{
+  padding: 0% 10%;
+  background-color: brown;
+}
+
+#coluna1{
+  padding: 0% 15%;
+  margin: 0% 10%;
+  border-color: black;
+}
+
+.categoria{
+  width: 100%;
+}
+
+.status{
+  width: 100%;
+}
+
+mat-slider {
+  width: 95%;
+}
+
+.imagemCapa{
+  height: 350px;
+  margin-left: 200px;
+}
+
