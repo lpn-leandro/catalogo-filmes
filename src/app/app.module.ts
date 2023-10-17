@@ -7,18 +7,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
+import { PageNameComponent } from './page-name/page-name.component';
+import { ItemCardComponent } from './item-card/item-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MovieListComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     NavbarComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    PageNameComponent,
+    ItemCardComponent,
+    MovieListComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
