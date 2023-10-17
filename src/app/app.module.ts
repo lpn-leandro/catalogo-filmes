@@ -11,16 +11,23 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSliderModule} from '@angular/material/slider';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { MovieListComponent } from './movie-list/movie-list.component';
+import { PageNameComponent } from './page-name/page-name.component';
+import { ItemCardComponent } from './item-card/item-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    NavbarComponent,
+    LandingPageComponent,
+    PageNameComponent,
+    ItemCardComponent,
+    MovieListComponent,
     MatInputModule,
     MatFormFieldModule,
     MatIconModule,
