@@ -6,6 +6,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 const routes: Routes = [
   { path: '', component: LandingPageComponent, data: {currentPage: "Meus Filmes"}},
   { path: 'movie-list', component: MovieListComponent, data: {currentPage: "Meus Filmes"}},
+  //{ path: 'register', component: Regis}
 ];
 
 @NgModule({
