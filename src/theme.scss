@@ -26,6 +26,10 @@ $warn: mat.define-palette(mat.$red-palette);
 
 }
 
+$my-typography: mat.define-typography-config(
+  $font-family: 'Noto Sans'
+);
+
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
 
@@ -34,8 +38,11 @@ $theme: mat.define-light-theme((
     primary: $primary,
     accent: $accent,
     warn: $warn,
-  )
+  ), typography: $my-typography,
 ));
+
+
+
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component

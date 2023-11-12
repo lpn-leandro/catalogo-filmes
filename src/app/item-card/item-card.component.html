@@ -1,12 +1,16 @@
-<a routerLink='/movie-list' routerLinkActive="active"
-  ><mat-card routerLink='/movie-list' routerLinkActive="active" class="example-card">
-    <img
+<a class="a" routerLink="/movie-list" routerLinkActive="active"
+  ><mat-card
+    routerLink="/movie-list"
+    routerLinkActive="active"
+    class="card"
+  >
+    <img class="image"
       mat-card-image
-      src="https://m.media-amazon.com/images/M/MV5BMDBmYTZjNjUtN2M1MS00MTQ2LTk2ODgtNzc2M2QyZGE5NTVjXkEyXkFqcGdeQXVyNzAwMjU2MTY@._V1_.jpg"
-      alt=""
+      [src]="movie.photo"
     />
-    <mat-card-header>
-      <mat-card-title>Oppenheimer</mat-card-title>
+    <mat-card-header class="header">
+      <mat-card-title class="title">{{ movie.name }}</mat-card-title>
+      <mat-card-subtitle class="subtitle">{{movie.producer}}</mat-card-subtitle>
     </mat-card-header>
   </mat-card>
 </a>
