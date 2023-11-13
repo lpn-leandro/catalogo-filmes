@@ -7,7 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
 import { Movie } from '../movie';
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
+//import { HttpClient } from '@angular/common/http';
 import { MovieService } from '../movie.service';
 //import {a } from 'src/'
 
@@ -33,6 +33,8 @@ export class MovieListComponent{
   movieService: MovieService = inject(MovieService);
   
   constructor() {
-    this.movieList = this.movieService.getAllMovies();
+    this.movieService.getAllMovies().then((movieList: Movie[]) => {
+      this.movieList = movieList;
+    });
   }
 }

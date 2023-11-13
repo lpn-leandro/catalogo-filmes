@@ -1,0 +1,19 @@
+<article>
+  <img
+    class="listing-photo"
+    [src]="movie?.photo"
+    alt="Exterior photo of {{ movie?.name }}"
+  />
+  <section class="listing-description">
+    <h2 class="listing-heading">{{ movie?.name }}</h2>
+    <p class="listing-location">{{ movie?.producer }}, {{ movie?.director }}</p>
+  </section>
+  <section class="listing-features">
+    <h2 class="section-heading">About this housing location</h2>
+    <ul>
+      <li>Units available: {{movie?.releaseDate}}</li>
+      <li>Does this location have wifi: {{movie?.gender}}</li>
+      <li>Does this location have laundry: {{ movie?.sinopse }}</li>
+    </ul>
+  </section>
+</article>

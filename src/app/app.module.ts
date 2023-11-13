@@ -14,6 +14,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { PageNameComponent } from './page-name/page-name.component';
 import { ItemCardComponent } from './item-card/item-card.component';
+import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -32,6 +33,7 @@ import { ItemCardComponent } from './item-card/item-card.component';
     MatIconModule,
     MatSliderModule,
     RegisterComponent,
+    MovieDetailComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
