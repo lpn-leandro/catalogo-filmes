@@ -99,6 +99,16 @@
       "releaseDate": 6,
       "gender": true,
       "sinopse": true
+    },
+    {
+      "id": 10,
+      "name": "Kimi no na wa",
+      "producer": "Kyoto",
+      "director": "IL",
+      "photo": "https://br.web.img2.acsta.net/medias/nmedia/18/90/16/48/20083748.jpg",
+      "releaseDate": 4,
+      "gender": true,
+      "sinopse": true
     }
   ]
 }

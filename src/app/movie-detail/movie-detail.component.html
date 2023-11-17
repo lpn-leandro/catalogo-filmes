@@ -1,19 +1,60 @@
 <article>
-  <img
-    class="listing-photo"
-    [src]="movie?.photo"
-    alt="Exterior photo of {{ movie?.name }}"
-  />
-  <section class="listing-description">
-    <h2 class="listing-heading">{{ movie?.name }}</h2>
-    <p class="listing-location">{{ movie?.producer }}, {{ movie?.director }}</p>
-  </section>
-  <section class="listing-features">
-    <h2 class="section-heading">About this housing location</h2>
-    <ul>
-      <li>Units available: {{movie?.releaseDate}}</li>
-      <li>Does this location have wifi: {{movie?.gender}}</li>
-      <li>Does this location have laundry: {{ movie?.sinopse }}</li>
-    </ul>
-  </section>
+  
+  <div class="movie-info">
+    <section class="movie-data">
+    <div>
+    <img
+      class="movie-cover"
+      [src]="movie?.photo"
+      alt="Capa do filme {{ movie?.name }}"
+    />
+  </div>
+
+  
+      <mat-list>
+        
+        <div matListItemTitles>Sinopse</div><mat-divider></mat-divider>
+        <mat-list-item>
+          <div matListItemLine>{{ movie?.sinopse }}</div>
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+        <div matListItemTitle>Data de Lançamento</div>
+        <mat-list-item>
+          <div matListItemLine>{{ movie?.releaseDate }}</div>
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+        <div matListItemTitle>Duração</div>
+        <mat-list-item>
+          <div matListItemLine>{{ movie?.name }}</div>
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+        <div matListItemTitle>Diretor</div>
+        <mat-list-item>
+          <div matListItemLine>{{ movie?.director }}</div>
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+        <div matListItemTitle>Pais</div>
+        <mat-list-item>
+          <div matListItemLine>{{ movie?.gender }}</div>
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+        <div matListItemTitle>Estudio</div>
+        <mat-list-item>
+          <div matListItemLine>{{ movie?.producer }}</div>
+        </mat-list-item>
+      </mat-list>
+
+      <div class="movie-status-btn">
+        <button mat-fab extended color="accent">
+          <mat-icon>favorite</mat-icon>
+          Assistido
+        </button>
+      </div>
+    </section>
+  </div>
 </article>
