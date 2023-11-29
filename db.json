@@ -1,19 +1,179 @@
 {
-  "posts": [
+  "movies": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "id": 10,
+      "name": "Um sonho de Liberdade",
+      "producer": "Chicago",
+      "director": "IL",
+      "photo": "https://br.web.img2.acsta.net/medias/nmedia/18/90/16/48/20083748.jpg",
+      "releaseDate": 4,
+      "gender": true,
+      "sinopse": true
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "data": "2023-11-14T22:04:22.327Z",
+      "capa": "de",
+      "nome": "de",
+      "estudio": "de",
+      "diretor": "dddd",
+      "categoria": [
+        "Drama"
+      ],
+      "status": [
+        "Não Assistido"
+      ],
+      "descricao": "de",
+      "qualidade": "",
+      "id": 11
+    },
+    {
+      "data": "2023-11-14T22:16:51.227Z",
+      "capa": "d",
+      "nome": "d",
+      "estudio": "d",
+      "diretor": "d",
+      "categoria": [
+        "Suspense",
+        "Drama"
+      ],
+      "status": [
+        "Desejo Assistir"
+      ],
+      "descricao": "de",
+      "qualidade": "",
+      "id": 12
+    },
+    {
+      "dataLancamento": "2023-11-15T01:36:28.036Z",
+      "capa": "ef",
+      "nome": "er",
+      "estudio": "rt",
+      "diretor": "tr",
+      "categoria": [
+        "Drama"
+      ],
+      "status": [
+        "Desejo Assistir"
+      ],
+      "sinopse": "vcvvvvvvvvvvvvvvvvvvvvvvvvvv",
+      "nota": 0,
+      "id": 13
+    },
+    {
+      "dataLancamento": "2023-11-15T01:48:28.139Z",
+      "capa": "rrrrrrrrrrrrrrr",
+      "nome": "rrrrrrrre",
+      "estudio": "eeeeeeeeeeeeer",
+      "diretor": "eeeeee",
+      "categoria": [
+        "Ação",
+        "Drama"
+      ],
+      "status": [
+        "Não Assistido"
+      ],
+      "sinopse": "ccccccccccccccccccvvvvvvf",
+      "nota": 0,
+      "id": 14
+    },
+    {
+      "dataLancamento": "2023-11-15T01:48:28.139Z",
+      "capa": "rrrrrrrrrrrrrrr",
+      "nome": "rrrrrrrre",
+      "estudio": "eeeeeeeeeeeeer",
+      "diretor": "eeeeee",
+      "categoria": [
+        "Ação",
+        "Drama"
+      ],
+      "status": [
+        "Não Assistido"
+      ],
+      "sinopse": "ccccccccccccccccccvvvvvvf",
+      "nota": 0,
+      "id": 15
+    },
+    {
+      "dataLancamento": "2023-11-26T02:23:22.104Z",
+      "capa": "s",
+      "nome": "s",
+      "estudio": "s",
+      "diretor": "s",
+      "categoria": [
+        "Comedia"
+      ],
+      "status": [
+        "Não Assistido"
+      ],
+      "sinopse": "swwwwwwwwwwww",
+      "nota": 0,
+      "id": 16
+    },
+    {
+      "dataLancamento": "2023-11-26T04:05:14.208Z",
+      "capa": "https://www.publicitarioscriativos.com/wp-content/uploads/2019/08/Todos-os-po%CC%82steres-do-Universo-Cinematogra%CC%81fico-Marvel-em-alta-qualidade.png",
+      "nome": "teste",
+      "estudio": "one",
+      "diretor": "porque",
+      "categoria": [
+        "Drama",
+        "Documentario"
+      ],
+      "status": [
+        "Assistido"
+      ],
+      "sinopse": "eeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "nota": 0,
+      "id": 17
+    },
+    {
+      "capa": "e",
+      "nome": "e",
+      "estudio": "e",
+      "diretor": "e",
+      "dataLancamento": "",
+      "categoria": [
+        "Suspense",
+        "Ação"
+      ],
+      "status": [
+        "Não Assistido"
+      ],
+      "sinopse": "e",
+      "nota": 0,
+      "id": 18
+    },
+    {
+      "capa": "a",
+      "nome": "a",
+      "estudio": "a",
+      "diretor": "a",
+      "dataLancamento": "12/12/31",
+      "categoria": [
+        "Ação"
+      ],
+      "status": [
+        "Desejo Assistir"
+      ],
+      "sinopse": "ddddddd",
+      "nota": 0,
+      "id": 19
+    },
+    {
+      "capa": "https://www.publicitarioscriativos.com/wp-content/uploads/2019/08/Todos-os-po%CC%82steres-do-Universo-Cinematogra%CC%81fico-Marvel-em-alta-qualidade.png",
+      "nome": "f",
+      "estudio": "d",
+      "diretor": "d",
+      "dataLancamento": "12/10/23",
+      "categoria": [
+        "Drama"
+      ],
+      "status": [
+        "Não Assistido"
+      ],
+      "sinopse": "nfcw",
+      "nota": 0,
+      "id": 20
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

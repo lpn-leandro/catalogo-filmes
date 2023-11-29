@@ -33,7 +33,7 @@ import { ItemCardComponent } from './item-card/item-card.component';
     MatIconModule,
     MatSliderModule,
     RegisterComponent
->>>>>>>>> Temporary merge branch 2
+
   ],
   providers: [],
   bootstrap: [AppComponent]
