@@ -9,7 +9,6 @@ const routes: Routes = [
   { path: 'movie-list', component: MovieListComponent, data: {currentPage: "Meus Filmes"}},
   { path: 'register', component: RegisterComponent, data: {currentPage: "Cadastro"}}
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],

@@ -31,7 +31,8 @@ import { ItemCardComponent } from './item-card/item-card.component';
     MatFormFieldModule,
     MatIconModule,
     MatSliderModule,
-    RegisterComponent,
+    RegisterComponent
+
   ],
   providers: [],
   bootstrap: [AppComponent],

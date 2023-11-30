@@ -1,28 +1,32 @@
-import {
-  FormControl,
-  FormGroupDirective,
-  NgForm,
-  Validators,
-  FormsModule,
-  ReactiveFormsModule,
-} from '@angular/forms';
-import { Component } from '@angular/core';
-import {ErrorStateMatcher} from '@angular/material/core';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatSliderModule} from '@angular/material/slider';
-import {MatIconModule} from '@angular/material/icon';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatNativeDateModule} from '@angular/material/core';
-import {NgIf, NgFor} from '@angular/common';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import {MatSelectModule} from '@angular/material/select';
+import { FormControl, FormGroupDirective, NgForm, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { Component, AfterViewInit, OnInit } from '@angular/core';
+import { ErrorStateMatcher } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { NgIf, NgFor, CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatSelectModule } from '@angular/material/select';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import Movies from '../model/movies';
+import { MovieServerService } from '../movie-server.service';
+import { EnabledBlockingInitialNavigationFeature, Router } from '@angular/router';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
-  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+  isErrorState(
+    control: FormControl | null,
+    form: FormGroupDirective | NgForm | null
+  ): boolean {
     const isSubmitted = form && form.submitted;
-    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+    return !!(
+      control &&
+      control.invalid &&
+      (control.dirty || control.touched || isSubmitted)
+    );
   }
 }
 
@@ -33,34 +37,141 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   standalone: true,
   imports: [
     FormsModule,
-     MatFormFieldModule,
+    MatFormFieldModule,
     MatInputModule,
-    ReactiveFormsModule, 
+    ReactiveFormsModule,
     NgIf,
-    NgFor, 
+    NgFor,
+    CommonModule,
     MatSliderModule,
     MatDatepickerModule,
     MatNativeDateModule,
     MatIconModule,
     MatSelectModule,
     MatButtonModule,
-    MatCardModule
-      ]
-  
+    MatCardModule,
+  ],
 })
-export class RegisterComponent {
- 
+export class RegisterComponent implements AfterViewInit, OnInit{
+  movies?: Movies;
   matcher = new MyErrorStateMatcher();
-  categorias = new FormControl('');
-  Listadecategorias: string[] = ['Terror', 'Comedia', 'Suspense', 'Ação', 'Drama', 'Documentario', 'Romance', 'Ficção científica'];
-  status = new FormControl('');
-  Listadestatus: string[] = ['Assistido', 'Não Assistido', 'Desejo Assistir'];
+ 
+  capa: string = '';
+  nome: string = '';
+  estudio: string = '';
+  diretor: string = '';
+  descricao: string = '';
+  data: Date = new Date();
+  dataLancamento: string = '';
+  categoria: string = '';
+  statusi: string = '';
+  nota: number = 0;
+  mostrarFormulario: boolean = false;
+  atualizaHora: any;
+  horaDeHollywood: string = '';
+  myForm: FormGroup;
+
+  constructor(
+    private fb: FormBuilder,
+    private movieServer: MovieServerService,
+    private rotas: Router
+  ) {
+    this.myForm = this.fb.group({
+      capa: ['', [Validators.required]],
+      nome: ['', Validators.required],
+      estudio: ['', Validators.required],
+      diretor: ['', Validators.required],
+      descricao: ['', Validators.required],
+      dataLancamento: ['', Validators.required],
+      // categoria: ['', Validators.required],
+      // status: ['', Validators.required],
+      // qualidade: ['', Validators.required]
+    });
+  }
+
+
+  ngAfterViewInit(): void {
+    alert("Carregando...")
+    this.mostrarFormulario = true;
+    alert('Sua pagima esta rodando no localhost port 4200:')
+  }
+
+  ngOnInit(): void {
+   
+      this.atualizaHora = setInterval(() => {
+        this.data = new Date();
+        this.horaDeHollywood = this.data.toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles' });
+      }, 1000); 
+  }
+
   Qualidade(value: number): string {
+    
     if (value >= 1) {
-      return Math.round(value / 1) + 'm';
+      return Math.round(value / 1) + '';
     }
+    this.nota = value;
     return `${value}`;
   }
 
+  onSubmit() {
+      
+    let movie = new Movies(
+      this.capa,
+      this.nome,
+      this.estudio,
+      this.diretor,
+      this.dataLancamento,
+      this.nota,
+      this.categoria,
+      this.statusi,
+      this.descricao
+    );
+    if (this.myForm.valid) {
+      // Save movie data to the server
+      this.movieServer.saveMovies(movie);
 
+      alert('Filme salvo com susseso');
+    } else {
+      alert('cachorro');
+    }
+    /*
+  onSubmit() {
+    this.movieServer.saveFrase(this.hello)
+    console.log(this.hello);
+    /*let capa = this.movies?.capa || '';
+    let nome = this.movies?.nome || '';
+    let estudio = this.movies?.estudio || '';
+    let diretor = this.movies?.diretor || '';
+    let qualidade =this.movies?.qualidade || '';
+    let descricao = this.movies?.descricao || '';
+    let data = this.movies?.data || '';
+    let categoria = this.movies?.categoria || '';
+    let status = this.movies?.status || '';
+    let newMovie = new Movies(capa, nome, estudio, diretor, data, qualidade, categoria, status, descricao);
+    this.movieServer.saveMovies(newMovie);
+
+    */
+    alert('ola mundo');
   }
+
+  categorias = new FormControl('');
+  Listadecategorias: string[] = [
+    'Terror',
+    'Comedia',
+    'Suspense',
+    'Ação',
+    'Drama',
+    'Documentario',
+    'Romance',
+    'Ficção científica',
+  ];
+
+  status = new FormControl('');
+  Listadestatus: string[] = ['Assistido', 'Não Assistido', 'Desejo Assistir'];
+
+
+  Voltar(){
+ this.rotas.navigate(['/movie-list'])
+  }
+ 
+}
