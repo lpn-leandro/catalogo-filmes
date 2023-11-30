@@ -16,9 +16,7 @@ import { PageNameComponent } from './page-name/page-name.component';
 import { ItemCardComponent } from './item-card/item-card.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -28,6 +26,7 @@ import { ItemCardComponent } from './item-card/item-card.component';
     PageNameComponent,
     ItemCardComponent,
     MovieListComponent,
+    AppRoutingModule,
     MatInputModule,
     MatFormFieldModule,
     MatIconModule,
@@ -36,6 +35,6 @@ import { ItemCardComponent } from './item-card/item-card.component';
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
