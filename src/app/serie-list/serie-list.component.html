@@ -1,0 +1,18 @@
+<section>
+    <div class="container">
+      <div class="d-flex flex-wrap gap-1 justify-content-center justify-content-md-start">
+        <app-item-card
+          class="my-card w-25 w-auto"
+          *ngFor="let serie of serieList"
+          [serie]="serie"
+        ></app-item-card>
+      </div>
+    </div>
+  </section>
+  
+  <div class="goToRegisterButton">
+    <button routerLink="/register" mat-fab color="accent">
+      <mat-icon>bookmark</mat-icon>
+    </button>
+  </div>
+  

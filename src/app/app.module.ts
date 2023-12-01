@@ -15,9 +15,11 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { PageNameComponent } from './page-name/page-name.component';
 import { ItemCardComponent } from './item-card/item-card.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
+import { SerieDetailComponent } from './serie-detail/serie-detail.component';
+import { SerieListComponent } from './serie-list/serie-list.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -34,6 +36,8 @@ import { MovieDetailComponent } from './movie-detail/movie-detail.component';
     MatSliderModule,
     RegisterComponent,
     MovieDetailComponent,
+    SerieListComponent,
+    SerieDetailComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

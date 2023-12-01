@@ -5,14 +5,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
-import { Movie } from '../movie';
+import { Serie } from '../serie';
 import { CommonModule } from '@angular/common';
-import { MovieService } from '../movie.service';
+import { SerieService } from '../serie.service';
 
 @Component({
-  selector: 'app-movie-list',
-  templateUrl: './movie-list.component.html',
-  styleUrls: ['./movie-list.component.scss'],
+  selector: 'app-serie-list',
+  templateUrl: './serie-list.component.html',
+  styleUrls: ['./serie-list.component.scss'],
   standalone: true,
   imports: [
     MatGridListModule,
@@ -24,15 +24,15 @@ import { MovieService } from '../movie.service';
     CommonModule,
   ],
 })
-export class MovieListComponent{
+export class SerieListComponent {
   currentPage = 'Meus Filmes';
 
-  movieList: Movie[] = [];
-  movieService: MovieService = inject(MovieService);
-  
+  serieList: Serie[] = [];
+  serieService: SerieService = inject(SerieService);
+
   constructor() {
-    this.movieService.getAllMovies().then((movieList: Movie[]) => {
-      this.movieList = movieList;
+    this.serieService.getAllSeries().then((serieList: Serie[]) => {
+      this.serieList = serieList;
     });
   }
 }
