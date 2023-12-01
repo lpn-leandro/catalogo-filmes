@@ -1,20 +1,20 @@
 import { Injectable } from '@angular/core';
-import { Movie } from './movie';
+import { Serie } from './serie';
 
 @Injectable({
   providedIn: 'root'
 })
-export class MovieService {
+export class SerieService {
 
-  url = 'http://localhost:3000/movies';
+  url = 'http://localhost:3000/series';
 
-  async  getAllMovies(): Promise<Movie[]> {
+  async  getAllSeries(): Promise<Serie[]> {
     const data = await fetch(this.url);
     return await data.json() ?? [];
   }
   
   
-  async getMovieById(id: number): Promise<Movie | undefined> {
+  async getSerieById(id: number): Promise<Serie | undefined> {
     const data = await fetch(`${this.url}/${id}`);
     return await data.json() ?? {};
   }
