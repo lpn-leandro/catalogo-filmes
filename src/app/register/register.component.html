@@ -1,0 +1,90 @@
+
+<div id="coluna1">
+<div>
+  <p>Hora Brazil {{ data | date: 'HH:MM:ss'}}</p>
+  <p>Hora Holywood {{ horaDeHollywood }}</p>
+  
+</div>
+  
+<div *ngIf="mostrarFormulario">
+<form class="cadastro" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+
+
+    <img class="imagemCapa" [src]="capa" >
+   <mat-form-field class="cadastro">
+    <mat-label>Capa</mat-label>
+    <input matInput  placeholder="Insira a url da imagem" value="" formControlName="capa" [(ngModel)]="capa">
+    
+  </mat-form-field>
+    
+  <mat-form-field class="cadastro">
+    <mat-label>Nome</mat-label>
+    <input matInput placeholder="Thor" value="" formControlName="nome" [(ngModel)]="nome" pattern="^[^\s]+(\s[^\s]+)*$" >
+    
+  </mat-form-field>
+
+  <mat-form-field class="cadastro">
+    <mat-label>Estudio </mat-label>
+    <input matInput placeholder="Marvel" value="Marvel" formControlName="estudio"  [(ngModel)]="estudio" pattern="^[^\s]+(\s[^\s]+)*$">
+  </mat-form-field>
+
+  <mat-form-field class="cadastro">
+    <mat-label>Diretor</mat-label>
+    <input matInput placeholder="Marvel" value="" formControlName="diretor" [(ngModel)]="diretor" pattern="^[^\s]+(\s[^\s]+)*$">
+  </mat-form-field>
+
+
+  <mat-form-field class="cadastro">
+    <mat-label>Data de Lancamento</mat-label>
+    <input matInput placeholder="" value="" formControlName="dataLancamento" [(ngModel)]="dataLancamento" mask="00/00/0000" placeholder="DD/MM/AAAA">
+  </mat-form-field>
+
+
+  <mat-form-field class="cadastro">
+    <mat-label>Nota</mat-label>
+    <input matInput placeholder="100" type="text" formControlName="nota" [(ngModel)]="nota" pattern="^(?:100|\d{1,2})$">
+  </mat-form-field>
+  
+    
+  <mat-form-field class="categoria">
+    <mat-label>Categoria</mat-label>
+    <mat-select [formControl]="categorias" multiple [(ngModel)]="categoria">
+      <mat-select-trigger>
+        {{categorias.value?.[0] || ''}}
+        <span *ngIf="(categorias.value?.length || 0) > 1" class="categoriass" formControlName="categoriass">
+          (+{{(categorias.value?.length || 0) - 1}} {{categorias.value?.length === 2 ? 'other' : 'others'}})
+        </span>
+      </mat-select-trigger>
+      <mat-option *ngFor="let categoriass of Listadecategorias" [value]="categoriass">{{categoriass}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+    <mat-form-field class="status">
+      <mat-label>Status</mat-label>
+      <mat-select [formControl]="status" multiple [(ngModel)]="statusi">
+        <mat-select-trigger>
+          {{status.value?.[0] || ''}}
+          <span *ngIf="(status.value?.length || 0) > 1" class="statuss" formControlName="statuss">
+            (+{{(status.value?.length || 0) - 1}} {{status.value?.length === 2 ? 'other' : 'others'}})
+          </span>
+        </mat-select-trigger>
+        <mat-option *ngFor="let statuss of Listadestatus" [value]="statuss">{{statuss}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <mat-form-field class="cadastro">
+      <mat-label>Descrição</mat-label>
+      <input matInput #message maxlength="256" placeholder="Ex. I need help with..." formControlName="descricao" [(ngModel)]="descricao" pattern="^[^\s]+(\s[^\s]+)*$" >
+      <mat-hint align="start"><strong>Escreva o que acha sobre o filme </strong> </mat-hint>
+      <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+    </mat-form-field>
+
+    <button mat-raised-button color="accent"
+    (click)="Voltar()">Voltar</button>
+
+    <button mat-raised-button color="accent" type="submit"
+     [disabled]="myForm.invalid">Cadastrar
+    </button>
+  </form>
+</div>

@@ -1,0 +1,133 @@
+{
+  "movies": [
+    {
+      "id": 0,
+      "name": "Um sonho de Liberdade",
+      "producer": "Chicago",
+      "director": "IL",
+      "photo": "https://br.web.img2.acsta.net/medias/nmedia/18/90/16/48/20083748.jpg",
+      "releaseDate": 4,
+      "gender": true,
+      "sinopse": true
+    },
+    {
+      "id": 1,
+      "name": "O Poderoso Chefão",
+      "producer": "Santa Monica",
+      "director": "CA",
+      "photo": "https://m.media-amazon.com/images/S/pv-target-images/9dc274b425b256fb31ae9963ca330dbc69fbde0b7d6bd73845e4a0f97acf079d.jpg",
+      "releaseDate": 0,
+      "gender": false,
+      "sinopse": true
+    },
+    {
+      "id": 2,
+      "name": "Batman - O Cavaleiro das Trevas",
+      "producer": "Juneau",
+      "director": "AK",
+      "photo": "https://seocraudio.files.wordpress.com/2008/08/papel-de-parede-coringa.jpg",
+      "releaseDate": 1,
+      "gender": false,
+      "sinopse": false
+    },
+    {
+      "id": 3,
+      "name": "O Poderoso Chefão II",
+      "producer": "Chicago",
+      "director": "IL",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzQ-Yy8b8UFsERbc1pH2XcbeXCNVfu42WnzSDvx1rCR6F-6mi47pylLwgnFzAahEycs6E&usqp=CAU",
+      "releaseDate": 1,
+      "gender": true,
+      "sinopse": false
+    },
+    {
+      "id": 4,
+      "name": "12 Homens e uma Sentença",
+      "producer": "Gary",
+      "director": "IN",
+      "photo": "https://vertentesdocinema.com/wp-content/uploads/2020/09/12-homens-e-uma-sentenca-poster.jpg",
+      "releaseDate": 1,
+      "gender": true,
+      "sinopse": false
+    },
+    {
+      "id": 5,
+      "name": "A Lista de Schindler",
+      "producer": "Oakland",
+      "director": "CA",
+      "photo": "https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
+      "releaseDate": 2,
+      "gender": true,
+      "sinopse": true
+    },
+    {
+      "id": 6,
+      "name": "O Senhor dos Anéis: O Retorno do Rei",
+      "producer": "Oakland",
+      "director": "CA",
+      "photo": "https://images-americanas.b2w.io/produtos/4989954948/imagens/dvd-o-senhor-dos-aneis-o-retorno-do-rei-filme/4989954948_1_xlarge.jpg",
+      "releaseDate": 5,
+      "gender": true,
+      "sinopse": true
+    },
+    {
+      "id": 7,
+      "name": "Pulp Fiction - Tempo de Violência",
+      "producer": "Oakland",
+      "director": "CA",
+      "photo": "https://imusic.b-cdn.net/images/item/original/043/5060223762043.jpg?pulp-fiction-2011-pulp-fiction-dvd&class=scaled&v=1647662197",
+      "releaseDate": 2,
+      "gender": true,
+      "sinopse": true
+    },
+    {
+      "id": 8,
+      "name": "O Senhor dos Anéis: A Sociedade do Anel",
+      "producer": "Oakland",
+      "director": "CA",
+      "photo": "https://m.media-amazon.com/images/M/MV5BMmM2M2MwOTYtNzVhMi00MWU0LThmZjEtNGZiNTc0YjY3ODQ0XkEyXkFqcGdeQXVyMTEwNDU1MzEy._V1_.jpg",
+      "releaseDate": 10,
+      "gender": false,
+      "sinopse": false
+    },
+    {
+      "id": 9,
+      "name": "Três Homens em Conflito",
+      "producer": "Portland",
+      "director": "OR",
+      "photo": "https://www.casadamemoriaitaliana.com.br/wp-content/uploads/2019/05/treshomensemconflito.capa_.jpg",
+      "releaseDate": 6,
+      "gender": true,
+      "sinopse": true
+    },
+    {
+      "id": 10,
+      "name": "Kimi no na wa",
+      "producer": "Kyoto",
+      "director": "IL",
+      "photo": "https://m.media-amazon.com/images/M/MV5BODRmZDVmNzUtZDA4ZC00NjhkLWI2M2UtN2M0ZDIzNDcxYThjL2ltYWdlXkEyXkFqcGdeQXVyNTk0MzMzODA@._V1_FMjpg_UX1000_.jpg",
+      "releaseDate": 4,
+      "gender": true,
+      "sinopse": true
+    },
+    {
+      "photo": "https://www.publicitarioscriativos.com/wp-content/uploads/2019/08/Todos-os-po%CC%82steres-do-Universo-Cinematogra%CC%81fico-Marvel-em-alta-qualidade-683x1024.jpg",
+      "name": "Guardioes da Galaxia",
+      "producer": "Marvel",
+      "director": "toniz",
+      "releaseDate": "12/23/12",
+      "categoria": [
+        "Drama"
+      ],
+      "status": [
+        "Não Assistido"
+      ],
+      "sinopse": "top demais um dos melhores que ja vi",
+      "nota": "87",
+      "id": 17
+    }
+  ],
+  "series":[
+    
+  ]
+}

@@ -1,0 +1,25 @@
+<button
+  class="card-menu"
+  [matMenuTriggerFor]="menu"
+  aria-label="Example icon-button with a menu"
+>
+  <mat-icon>more_horiz</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <mat-icon>playlist_remove</mat-icon>
+    <span>Remover Filme</span>
+  </button>
+</mat-menu>
+
+<a class="a" [routerLink]="['/movie-detail', movie.id]">
+  <mat-card class="my-card">
+    <img class="image" mat-card-image [src]="movie.photo" />
+    <mat-card-header class="header">
+      <mat-card-title class="title">{{ movie.name }}</mat-card-title>
+      <mat-card-subtitle class="subtitle">{{
+        movie.producer
+      }}</mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+</a>
