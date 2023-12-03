@@ -109,6 +109,25 @@
       "releaseDate": 4,
       "gender": true,
       "sinopse": true
+    },
+    {
+      "photo": "https://www.publicitarioscriativos.com/wp-content/uploads/2019/08/Todos-os-po%CC%82steres-do-Universo-Cinematogra%CC%81fico-Marvel-em-alta-qualidade-683x1024.jpg",
+      "name": "Guardioes da Galaxia",
+      "producer": "Marvel",
+      "director": "toniz",
+      "releaseDate": "12/23/12",
+      "categoria": [
+        "Drama"
+      ],
+      "status": [
+        "Não Assistido"
+      ],
+      "sinopse": "top demais um dos melhores que ja vi",
+      "nota": "87",
+      "id": 17
     }
+  ],
+  "series":[
+    
   ]
 }

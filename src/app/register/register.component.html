@@ -19,18 +19,18 @@
     
   <mat-form-field class="cadastro">
     <mat-label>Nome</mat-label>
-    <input matInput placeholder="Thor" value="" formControlName="nome" [(ngModel)]="nome" pattern="[A-Za-z]+" >
+    <input matInput placeholder="Thor" value="" formControlName="nome" [(ngModel)]="nome" pattern="^[^\s]+(\s[^\s]+)*$" >
     
   </mat-form-field>
 
   <mat-form-field class="cadastro">
     <mat-label>Estudio </mat-label>
-    <input matInput placeholder="Marvel" value="Marvel" formControlName="estudio"  [(ngModel)]="estudio" pattern="[A-Za-z]+">
+    <input matInput placeholder="Marvel" value="Marvel" formControlName="estudio"  [(ngModel)]="estudio" pattern="^[^\s]+(\s[^\s]+)*$">
   </mat-form-field>
 
   <mat-form-field class="cadastro">
     <mat-label>Diretor</mat-label>
-    <input matInput placeholder="Marvel" value="" formControlName="diretor" [(ngModel)]="diretor" pattern="[A-Za-z]+">
+    <input matInput placeholder="Marvel" value="" formControlName="diretor" [(ngModel)]="diretor" pattern="^[^\s]+(\s[^\s]+)*$">
   </mat-form-field>
 
 
@@ -40,12 +40,11 @@
   </mat-form-field>
 
 
-
-  <mat-slider min="0" max="100" step="1" showTickMarks discrete [displayWith]="Qualidade">
-    <input matSliderThumb formControlName="nota" [(ngModel)]="nota">
-  </mat-slider>
-   
-  {{nota}}
+  <mat-form-field class="cadastro">
+    <mat-label>Nota</mat-label>
+    <input matInput placeholder="100" type="text" formControlName="nota" [(ngModel)]="nota" pattern="^(?:100|\d{1,2})$">
+  </mat-form-field>
+  
     
   <mat-form-field class="categoria">
     <mat-label>Categoria</mat-label>
@@ -76,7 +75,7 @@
 
     <mat-form-field class="cadastro">
       <mat-label>Descrição</mat-label>
-      <input matInput #message maxlength="256" placeholder="Ex. I need help with..." formControlName="descricao" [(ngModel)]="descricao" pattern="[A-Za-z]+" >
+      <input matInput #message maxlength="256" placeholder="Ex. I need help with..." formControlName="descricao" [(ngModel)]="descricao" pattern="^[^\s]+(\s[^\s]+)*$" >
       <mat-hint align="start"><strong>Escreva o que acha sobre o filme </strong> </mat-hint>
       <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
     </mat-form-field>
