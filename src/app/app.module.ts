@@ -17,9 +17,10 @@ import { ItemCardComponent } from './item-card/item-card.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { SerieDetailComponent } from './serie-detail/serie-detail.component';
 import { SerieListComponent } from './serie-list/serie-list.component';
+import { RegisterSeriesComponent } from './register-series/register-series.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, RegisterSeriesComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

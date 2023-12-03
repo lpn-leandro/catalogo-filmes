@@ -1,4 +1,3 @@
-
 import { FormControl, FormGroupDirective, NgForm, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { ErrorStateMatcher } from '@angular/material/core';
@@ -31,9 +30,9 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 }
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css'],
+  selector: 'app-register-series',
+  templateUrl: './register-series.component.html',
+  styleUrls: ['./register-series.component.scss'],
   standalone: true,
   imports: [
     FormsModule,
