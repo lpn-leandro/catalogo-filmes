@@ -1,0 +1,36 @@
+{
+  "movies": [
+    {
+      "capa": "r",
+      "nome": "r",
+      "estudio": "r",
+      "diretor": "r",
+      "dataLancamento": "22",
+      "categoria": [
+        "Drama"
+      ],
+      "status": [
+        "Não Assistido"
+      ],
+      "sinopse": "r",
+      "nota": 0,
+      "id": 1
+    },
+    {
+      "capa": "c",
+      "nome": "c",
+      "estudio": "c",
+      "diretor": "ed",
+      "dataLancamento": "12",
+      "categoria": [
+        "Drama"
+      ],
+      "status": [
+        "Não Assistido"
+      ],
+      "sinopse": "de",
+      "nota": 0,
+      "id": 2
+    }
+  ]
+}
