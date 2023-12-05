@@ -107,6 +107,7 @@ export class RegisterSeriesComponent implements AfterViewInit, OnInit{
   onSubmit() {
    
     let serie = new series(
+      2,
       this.capa,
       this.nome,
       this.estudio,
@@ -119,10 +120,10 @@ export class RegisterSeriesComponent implements AfterViewInit, OnInit{
     );
     if (this.myForm.valid) {
       // Save movie data to the server
-      this.movieServer.saveMovies(serie);
+      this.movieServer.saveSeries(serie);
 
       alert('Filme salvo com susseso');
-      this.rotas.navigate(['/movie-list']);
+      this.rotas.navigate(['/serie-list']);
     } else {
       alert('cachorro');
     }

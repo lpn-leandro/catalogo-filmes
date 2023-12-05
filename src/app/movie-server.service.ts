@@ -36,7 +36,7 @@ export class MovieServerService {
     localStorage.setItem('movies', JSON.stringify(series));
 
     // Envia os filmes para o servidor
-    fetch('http://localhost:3000/movies', {
+    fetch('http://localhost:3000/series', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -45,11 +45,11 @@ export class MovieServerService {
     })
     .then(response => response.json())
     .then(data => {
-      console.log('Filme cadastrado com sucesso!');
+      console.log('Serie cadastrado com sucesso!');
       //window.location.href = '../../index.html'; // Redireciona para a página inicial
     })
     .catch(error => {
-      console.error('Erro ao cadastrar o filme:', error);
+      console.error('Erro ao cadastrar o serie:', error);
     });
   }
 }
