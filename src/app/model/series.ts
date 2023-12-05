@@ -1,5 +1,4 @@
 export default class series{
-    id?: number;
     photo?: string;
     name?: string;
     producer?: string;
@@ -11,7 +10,7 @@ export default class series{
     seasons?: string;
 
     constructor(
-        id: number,
+
     photo: string,
     name: string,
     producer: string,
@@ -22,7 +21,7 @@ export default class series{
     sinopse: string,
     seasons: string,
     ){
-        this.id= id;
+
         this.photo = photo;
         this.name = name;
         this.producer = producer;

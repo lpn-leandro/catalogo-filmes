@@ -15,6 +15,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import Movies from '../model/movies';
 import { MovieServerService } from '../movie-server.service';
 import { EnabledBlockingInitialNavigationFeature, Router } from '@angular/router';
+import series from '../model/series';
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(
     control: FormControl | null,
@@ -51,7 +52,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
     MatCardModule,
   ],
 })
-export class RegisterComponent implements AfterViewInit, OnInit{
+export class RegisterSeriesComponent implements AfterViewInit, OnInit{
   movies?: Movies;
   matcher = new MyErrorStateMatcher();
  
@@ -105,7 +106,7 @@ export class RegisterComponent implements AfterViewInit, OnInit{
 
   onSubmit() {
    
-    let movie = new Movies(
+    let serie = new series(
       this.capa,
       this.nome,
       this.estudio,
@@ -114,11 +115,11 @@ export class RegisterComponent implements AfterViewInit, OnInit{
       this.nota,
       this.categoria,
       this.statusi,
-      this.descricao
+      this.descricao,
     );
     if (this.myForm.valid) {
       // Save movie data to the server
-      this.movieServer.saveMovies(movie);
+      this.movieServer.saveMovies(serie);
 
       alert('Filme salvo com susseso');
       this.rotas.navigate(['/movie-list']);

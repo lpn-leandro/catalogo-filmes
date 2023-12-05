@@ -125,9 +125,23 @@
       "sinopse": "top demais um dos melhores que ja vi",
       "nota": "87",
       "id": 17
+    },
+    {
+      "photo": "https://kanto.legiaodosherois.com.br/w760-h398-gnw-cfill-q95/wp-content/uploads/2017/10/legiao_9zdknSrIWGhlHKfYL3q0pDaogmwVZJ5b8CvQONeUxy.jpg.webp",
+      "name": "aa",
+      "producer": "aaaa",
+      "director": "aaaaaaa",
+      "releaseDate": "122132",
+      "categoria": [
+        "Ação"
+      ],
+      "status": [
+        "Não Assistido"
+      ],
+      "sinopse": "deeeeeee",
+      "nota": "55",
+      "id": 18
     }
   ],
-  "series":[
-    
-  ]
+  "series": []
 }
