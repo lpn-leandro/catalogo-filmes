@@ -1,3 +1,4 @@
+
 import { FormControl, FormGroupDirective, NgForm, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { ErrorStateMatcher } from '@angular/material/core';
@@ -15,7 +16,6 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import Movies from '../model/movies';
 import { MovieServerService } from '../movie-server.service';
 import { EnabledBlockingInitialNavigationFeature, Router } from '@angular/router';
-
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(
     control: FormControl | null,
@@ -65,7 +65,7 @@ export class RegisterComponent implements AfterViewInit, OnInit{
   dataLancamento: string = '';
   categoria: string = '';
   statusi: string = '';
-  nota: number = 0;
+  nota: string = '';
   mostrarFormulario: boolean = false;
   atualizaHora: any;
   horaDeHollywood: string = '';
@@ -83,9 +83,7 @@ export class RegisterComponent implements AfterViewInit, OnInit{
       diretor: ['', Validators.required],
       descricao: ['', Validators.required],
       dataLancamento: ['', Validators.required],
-      // categoria: ['', Validators.required],
-      // status: ['', Validators.required],
-      // qualidade: ['', Validators.required]
+      nota: ['', Validators.required],
     });
   }
 
@@ -104,17 +102,10 @@ export class RegisterComponent implements AfterViewInit, OnInit{
       }, 1000); 
   }
 
-  Qualidade(value: number): string {
-    
-    if (value >= 1) {
-      return Math.round(value / 1) + '';
-    }
-    this.nota = value;
-    return `${value}`;
-  }
+ 
 
   onSubmit() {
-      
+   
     let movie = new Movies(
       this.capa,
       this.nome,
@@ -131,26 +122,11 @@ export class RegisterComponent implements AfterViewInit, OnInit{
       this.movieServer.saveMovies(movie);
 
       alert('Filme salvo com susseso');
+      this.rotas.navigate(['/movie-list']);
     } else {
       alert('cachorro');
     }
-    /*
-  onSubmit() {
-    this.movieServer.saveFrase(this.hello)
-    console.log(this.hello);
-    /*let capa = this.movies?.capa || '';
-    let nome = this.movies?.nome || '';
-    let estudio = this.movies?.estudio || '';
-    let diretor = this.movies?.diretor || '';
-    let qualidade =this.movies?.qualidade || '';
-    let descricao = this.movies?.descricao || '';
-    let data = this.movies?.data || '';
-    let categoria = this.movies?.categoria || '';
-    let status = this.movies?.status || '';
-    let newMovie = new Movies(capa, nome, estudio, diretor, data, qualidade, categoria, status, descricao);
-    this.movieServer.saveMovies(newMovie);
-
-    */
+   
     alert('ola mundo');
   }
 

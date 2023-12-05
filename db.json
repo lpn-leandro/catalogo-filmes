@@ -109,6 +109,88 @@
       "releaseDate": 4,
       "gender": true,
       "sinopse": true
+    },
+    {
+      "photo": "https://www.publicitarioscriativos.com/wp-content/uploads/2019/08/Todos-os-po%CC%82steres-do-Universo-Cinematogra%CC%81fico-Marvel-em-alta-qualidade-683x1024.jpg",
+      "name": "Guardioes da Galaxia",
+      "producer": "Marvel",
+      "director": "toniz",
+      "releaseDate": "12/23/12",
+      "categoria": [
+        "Drama"
+      ],
+      "status": [
+        "Não Assistido"
+      ],
+      "sinopse": "top demais um dos melhores que ja vi",
+      "nota": "87",
+      "id": 17
+    },
+    {
+      "photo": "https://kanto.legiaodosherois.com.br/w760-h398-gnw-cfill-q95/wp-content/uploads/2017/10/legiao_9zdknSrIWGhlHKfYL3q0pDaogmwVZJ5b8CvQONeUxy.jpg.webp",
+      "name": "aa",
+      "producer": "aaaa",
+      "director": "aaaaaaa",
+      "releaseDate": "122132",
+      "categoria": [
+        "Ação"
+      ],
+      "status": [
+        "Não Assistido"
+      ],
+      "sinopse": "deeeeeee",
+      "nota": "55",
+      "id": 18
+    },
+    {
+      "photo": "https://cinema10.com.br/upload/series/series_2637_serie-de-the-last-of-us-3.jpg?default=poster",
+      "name": "ad",
+      "producer": "da",
+      "director": "da",
+      "releaseDate": "12/22/2025",
+      "gender": "22",
+      "check": [
+        "Drama"
+      ],
+      "sinopse": [
+        "Desejo Assistir"
+      ],
+      "seasons": "wwwww dxee",
+      "id": 19
+    }
+  ],
+  "series": [
+    {
+      "photo": "https://cinema10.com.br/upload/series/series_2637_serie-de-the-last-of-us-3.jpg?default=poster",
+      "name": "efef",
+      "producer": "ac",
+      "director": "aaaa",
+      "releaseDate": "aaaa",
+      "gender": "12",
+      "check": [
+        "Drama"
+      ],
+      "sinopse": [
+        "Não Assistido"
+      ],
+      "seasons": "cccccccccc",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "photo": "https://cinema10.com.br/upload/series/series_2637_serie-de-the-last-of-us-3.jpg?default=poster",
+      "name": "ee",
+      "producer": "eeeeeeeeeeee",
+      "director": "eeeeeeeeee",
+      "releaseDate": "12/12/33",
+      "gender": "66",
+      "check": [
+        "Ação"
+      ],
+      "sinopse": [
+        "Não Assistido"
+      ],
+      "seasons": "rgr"
     }
   ]
 }
