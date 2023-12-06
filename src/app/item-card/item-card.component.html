@@ -12,13 +12,13 @@
   </button>
 </mat-menu>
 
-<a class="a" [routerLink]="['/movie-detail', movie.id]">
+<a class="a" [routerLink]="[movie? '/movie-detail' : '/serie-detail', movie?movie.id : serie.id]">
   <mat-card class="my-card">
-    <img class="image" mat-card-image [src]="movie.photo" />
+    <img class="image" mat-card-image [src]="movie? movie.photo : serie.photo" />
     <mat-card-header class="header">
-      <mat-card-title class="title">{{ movie.name }}</mat-card-title>
+      <mat-card-title class="title">{{ movie? movie.name : serie.name}}</mat-card-title>
       <mat-card-subtitle class="subtitle">{{
-        movie.producer
+        movie? movie.producer : serie.producer
       }}</mat-card-subtitle>
     </mat-card-header>
   </mat-card>

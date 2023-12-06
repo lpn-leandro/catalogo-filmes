@@ -157,6 +157,23 @@
       ],
       "seasons": "wwwww dxee",
       "id": 19
+    },
+    {
+      "photo": "https://img.elo7.com.br/product/zoom/2A1A4BF/big-poster-filme-joker-coringa-joaquin-phoenix-lo02-90x60-cm-poster.jpg",
+      "name": "Joker",
+      "producer": "Dc",
+      "director": "Não sei",
+      "releaseDate": "01012019",
+      "categoria": [
+        "Ação",
+        "Drama"
+      ],
+      "status": [
+        "Assistido"
+      ],
+      "sinopse": "as",
+      "nota": "86",
+      "id": 20
     }
   ],
   "series": [
