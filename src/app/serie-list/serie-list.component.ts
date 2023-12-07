@@ -8,6 +8,8 @@ import { RouterModule } from '@angular/router';
 import { Serie } from '../serie';
 import { CommonModule } from '@angular/common';
 import { SerieService } from '../serie.service';
+import Movies from '../model/movies';
+import Series from '../model/series';
 
 @Component({
   selector: 'app-serie-list',
@@ -27,11 +29,11 @@ import { SerieService } from '../serie.service';
 export class SerieListComponent {
   currentPage = 'Meus Filmes';
 
-  serieList: Serie[] = [];
+  serieList: Series[] = [];
   serieService: SerieService = inject(SerieService);
 
   constructor() {
-    this.serieService.getAllSeries().then((serieList: Serie[]) => {
+    this.serieService.getAllSeries().then((serieList: Series[]) => {
       this.serieList = serieList;
     });
   }

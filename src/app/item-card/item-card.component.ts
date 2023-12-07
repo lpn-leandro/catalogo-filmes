@@ -7,6 +7,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
+import Movies from '../model/movies';
+import series from '../model/series';
 
 @Component({
   selector: 'app-item-card',
@@ -16,6 +18,6 @@ import {MatMenuModule} from '@angular/material/menu';
   imports: [MatCardModule, MatButtonModule, CommonModule, RouterModule, MatMenuModule, MatIconModule],
 })
 export class ItemCardComponent {
-  @Input() movie!: Movie;
-  @Input() serie!: Serie;
+  @Input() movie!: Movies;
+  @Input() serie!: series;
 }

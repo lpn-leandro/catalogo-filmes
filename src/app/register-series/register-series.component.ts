@@ -65,11 +65,12 @@ export class RegisterSeriesComponent implements AfterViewInit, OnInit{
   dataLancamento: string = '';
   categoria: string = '';
   statusi: string = '';
-  nota: string = '';
+  nota: number = 0;
   mostrarFormulario: boolean = false;
   atualizaHora: any;
   horaDeHollywood: string = '';
   myForm: FormGroup;
+  temporadas: number = 1
 
   constructor(
     private fb: FormBuilder,
@@ -84,6 +85,7 @@ export class RegisterSeriesComponent implements AfterViewInit, OnInit{
       descricao: ['', Validators.required],
       dataLancamento: ['', Validators.required],
       nota: ['', Validators.required],
+
     });
   }
 
@@ -107,7 +109,6 @@ export class RegisterSeriesComponent implements AfterViewInit, OnInit{
   onSubmit() {
    
     let serie = new series(
-      2,
       this.capa,
       this.nome,
       this.estudio,
@@ -117,6 +118,7 @@ export class RegisterSeriesComponent implements AfterViewInit, OnInit{
       this.categoria,
       this.statusi,
       this.descricao,
+   this.temporadas,
     );
     if (this.myForm.valid) {
       // Save movie data to the server

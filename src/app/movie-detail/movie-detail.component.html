@@ -35,9 +35,9 @@
           </mat-list-item>
 
           <mat-divider></mat-divider>
-          <div matListItemTitle>Pais</div>
+          <div matListItemTitle>Categoria</div>
           <mat-list-item>
-            <div matListItemLine>{{ movie?.gender }}</div>
+            <div matListItemLine>{{ movie?.categoria }}</div>
           </mat-list-item>
 
           <mat-divider></mat-divider>
@@ -45,14 +45,17 @@
           <mat-list-item>
             <div matListItemLine>{{ movie?.producer }}</div>
           </mat-list-item>
+
+          
         </mat-list>
       </div>
+      <div class="movie-status-btn position-fixed bottom-0 end-0">
+        <button mat-fab extended color="accent">
+          <mat-icon>favorite</mat-icon>
+          {{movie?.status}}
+        </button>
+      </div>
     </div>
-    <div class="movie-status-btn position-fixed bottom-0 end-0">
-      <button mat-fab extended color="accent">
-        <mat-icon>favorite</mat-icon>
-        Assistido
-      </button>
-    </div>
+   
   </div>
 </article>

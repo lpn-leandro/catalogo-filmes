@@ -9,6 +9,11 @@
         />
       </div>
       <div class="serie-detail p-3">
+        <mat-divider></mat-divider>
+          <div matListItemTitle>Nome: </div>
+          <mat-list-item>
+            <div matListItemLine>{{ serie?.name }}</div>
+          </mat-list-item>
         <mat-list>
           <div matListItemTitles>Sinopse</div>
           <mat-divider></mat-divider>
@@ -23,19 +28,13 @@
           </mat-list-item>
 
           <mat-divider></mat-divider>
-          <div matListItemTitle>Duração</div>
-          <mat-list-item>
-            <div matListItemLine>{{ serie?.name }}</div>
-          </mat-list-item>
-
-          <mat-divider></mat-divider>
           <div matListItemTitle>Diretor</div>
           <mat-list-item>
             <div matListItemLine>{{ serie?.director }}</div>
           </mat-list-item>
 
           <mat-divider></mat-divider>
-          <div matListItemTitle>Pais</div>
+          <div matListItemTitle>genero</div>
           <mat-list-item>
             <div matListItemLine>{{ serie?.gender }}</div>
           </mat-list-item>
@@ -46,13 +45,22 @@
             <div matListItemLine>{{ serie?.producer }}</div>
           </mat-list-item>
         </mat-list>
+
+        <mat-divider></mat-divider>
+          <div matListItemTitle>Temporadas</div>
+          <mat-list-item>
+            <div matListItemLine>{{ serie?.seasons }}</div>
+          </mat-list-item>
+
+
+      </div>
+      <div class="serie-status-btn position-fixed bottom-0 end-0">
+        <button mat-fab extended color="accent">
+          <mat-icon>favorite</mat-icon>
+          {{ serie?.check }}
+        </button>
       </div>
     </div>
-    <div class="serie-status-btn position-fixed bottom-0 end-0">
-      <button mat-fab extended color="accent">
-        <mat-icon>favorite</mat-icon>
-        Assistido
-      </button>
-    </div>
+    
   </div>
 </article>

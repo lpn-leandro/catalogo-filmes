@@ -191,6 +191,42 @@
         "Não Assistido"
       ],
       "seasons": "rgr"
+    },
+    {
+      "photo": "https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2021/06/09/loki_characterseries_loki_v2_lg.jpg",
+      "name": "Loki",
+      "producer": "Marvel",
+      "director": "Aaron Moorhead",
+      "releaseDate": "10/22/2020",
+      "gender": [
+        "Ação"
+      ],
+      "check": [
+        "Não Assistido"
+      ],
+      "sinopse": "otima serie",
+      "seasons": "",
+      "nota": "88",
+      "id": 3
+    },
+    {
+      "photo": "https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2021/06/09/loki_characterseries_loki_v2_lg.jpg",
+      "name": "Loki",
+      "producer": "Marvel",
+      "director": "Aaron Moorhead",
+      "releaseDate": "12/13/2020",
+      "gender": [
+        "Suspense",
+        "Ação",
+        "Drama"
+      ],
+      "check": [
+        "Desejo Assistir"
+      ],
+      "sinopse": "top pelo que todo mundo tem me falado",
+      "seasons": 2,
+      "nota": 87,
+      "id": 4
     }
   ]
 }

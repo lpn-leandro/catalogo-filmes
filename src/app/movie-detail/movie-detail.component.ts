@@ -9,6 +9,7 @@ import { DatePipe } from '@angular/common';
 import { MatListModule } from '@angular/material/list';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
+import Movies from '../model/movies';
 
 @Component({
   selector: 'app-movie-detail',
@@ -28,7 +29,7 @@ import { MatButtonModule } from '@angular/material/button';
 export class MovieDetailComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
   movieService = inject(MovieService);
-  movie: Movie | undefined;
+  movie: Movies | undefined;
 
   constructor() {
     const movieId = parseInt(this.route.snapshot.params['id'], 10);
