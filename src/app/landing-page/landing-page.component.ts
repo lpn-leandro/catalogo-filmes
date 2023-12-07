@@ -1,8 +1,9 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
+import { PageService } from '../page.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -12,5 +13,11 @@ import { RouterModule } from '@angular/router';
   imports: [MatButtonModule, MatDividerModule, MatIconModule, RouterModule],
 })
 export class LandingPageComponent {
-  currentPage: string = 'WatchZa';
+  title = 'WatchZa';
+
+  constructor(private pageService: PageService) {}
+  
+  ngOnInit(): void {
+    this.pageService.setPageName(this.title);
+  }
 }

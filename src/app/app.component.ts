@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PageService } from './page.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'catalogo-filmes';
-  pageName: string = 'leandro';
+  pageName: string = 'Meus Filmes';
+
+  constructor(private pageService: PageService) {
+    this.pageService.setPageName(this.pageName);
+  }
 }

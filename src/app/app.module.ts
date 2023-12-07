@@ -18,9 +18,10 @@ import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { SerieDetailComponent } from './serie-detail/serie-detail.component';
 import { SerieListComponent } from './serie-list/serie-list.component';
 import { RegisterSeriesComponent } from './register-series/register-series.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, AboutComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

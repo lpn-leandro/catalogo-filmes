@@ -1,5 +1,11 @@
-
-import { FormControl, FormGroupDirective, NgForm, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {
+  FormControl,
+  FormGroupDirective,
+  NgForm,
+  Validators,
+  FormsModule,
+  ReactiveFormsModule,
+} from '@angular/forms';
 import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
@@ -15,7 +21,11 @@ import { MatSelectModule } from '@angular/material/select';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import Movies from '../model/movies';
 import { MovieServerService } from '../movie-server.service';
-import { EnabledBlockingInitialNavigationFeature, Router } from '@angular/router';
+import {
+  EnabledBlockingInitialNavigationFeature,
+  Router,
+} from '@angular/router';
+import { PageService } from '../page.service';
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(
     control: FormControl | null,
@@ -52,10 +62,11 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
     MatCardModule,
   ],
 })
-export class RegisterComponent implements AfterViewInit, OnInit{
+export class RegisterComponent implements AfterViewInit, OnInit {
   movies?: Movies;
   matcher = new MyErrorStateMatcher();
- 
+  title = 'Cadastrar Filme';
+
   capa: string = '';
   nome: string = '';
   estudio: string = '';
@@ -74,7 +85,8 @@ export class RegisterComponent implements AfterViewInit, OnInit{
   constructor(
     private fb: FormBuilder,
     private movieServer: MovieServerService,
-    private rotas: Router
+    private rotas: Router,
+    private pageService: PageService
   ) {
     this.myForm = this.fb.group({
       capa: ['', [Validators.required]],
@@ -87,25 +99,23 @@ export class RegisterComponent implements AfterViewInit, OnInit{
     });
   }
 
-
   ngAfterViewInit(): void {
-    alert("Carregando...")
+    alert('Carregando...');
     this.mostrarFormulario = true;
-    alert('Sua pagima esta rodando no localhost port 4200:')
+    alert('Sua pagima esta rodando no localhost port 4200:');
   }
 
   ngOnInit(): void {
-   
-      this.atualizaHora = setInterval(() => {
-        this.data = new Date();
-        this.horaDeHollywood = this.data.toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles' });
-      }, 1000); 
+    this.atualizaHora = setInterval(() => {
+      this.data = new Date();
+      this.horaDeHollywood = this.data.toLocaleTimeString('en-US', {
+        timeZone: 'America/Los_Angeles',
+      });
+    }, 1000);
+    this.pageService.setPageName(this.title);
   }
 
- 
-
   onSubmit() {
-   
     let movie = new Movies(
       this.capa,
       this.nome,
@@ -126,7 +136,7 @@ export class RegisterComponent implements AfterViewInit, OnInit{
     } else {
       alert('cachorro');
     }
-   
+
     alert('ola mundo');
   }
 
@@ -145,9 +155,7 @@ export class RegisterComponent implements AfterViewInit, OnInit{
   status = new FormControl('');
   Listadestatus: string[] = ['Assistido', 'Não Assistido', 'Desejo Assistir'];
 
-
-  Voltar(){
- this.rotas.navigate(['/movie-list'])
+  Voltar() {
+    this.rotas.navigate(['/movie-list']);
   }
- 
 }

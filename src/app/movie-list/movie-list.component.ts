@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MovieService } from '../movie.service';
 import Movies from '../model/movies';
-
+import { PageService } from '../page.service';
 
 @Component({
   selector: 'app-movie-list',
@@ -25,20 +25,22 @@ import Movies from '../model/movies';
     CommonModule,
   ],
 })
-export class MovieListComponent{
-  currentPage = 'Meus Filmes';
-
-  rotaMovie = '/movie-detail'
-  rotaPhoto = '/movie-detail'
+export class MovieListComponent {
+  title = "Filmes"
+  rotaMovie = '/movie-detail';
+  rotaPhoto = '/movie-detail';
   movieList: Movies[] = [];
-  movieService: MovieService = inject(MovieService);
-  
-  constructor() {
+
+  constructor(
+    private movieService: MovieService,
+    private pageService: PageService
+  ) {}
+
+  ngOnInit(): void {
+    this.pageService.setPageName(this.title);
     this.movieService.getAllMovies().then((movieList: Movies[]) => {
       this.movieList = movieList;
     });
-
   }
-
 
 }

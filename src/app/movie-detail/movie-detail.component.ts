@@ -10,6 +10,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import Movies from '../model/movies';
+import { PageService } from '../page.service';
 
 @Component({
   selector: 'app-movie-detail',
@@ -30,11 +31,17 @@ export class MovieDetailComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
   movieService = inject(MovieService);
   movie: Movies | undefined;
+  title: string | undefined;
 
-  constructor() {
+  constructor(private pageService: PageService) {
+  }
+
+  ngOnInit(): void | undefined {
     const movieId = parseInt(this.route.snapshot.params['id'], 10);
     this.movieService.getMovieById(movieId).then((movie) => {
       this.movie = movie;
+      this.title = movie?.name;
+      this.pageService.setPageName(this.title || '');
     });
   }
 }

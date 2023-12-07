@@ -1,4 +1,11 @@
-import { FormControl, FormGroupDirective, NgForm, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {
+  FormControl,
+  FormGroupDirective,
+  NgForm,
+  Validators,
+  FormsModule,
+  ReactiveFormsModule,
+} from '@angular/forms';
 import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
@@ -14,8 +21,12 @@ import { MatSelectModule } from '@angular/material/select';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import Movies from '../model/movies';
 import { MovieServerService } from '../movie-server.service';
-import { EnabledBlockingInitialNavigationFeature, Router } from '@angular/router';
+import {
+  EnabledBlockingInitialNavigationFeature,
+  Router,
+} from '@angular/router';
 import series from '../model/series';
+import { PageService } from '../page.service';
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(
     control: FormControl | null,
@@ -52,10 +63,11 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
     MatCardModule,
   ],
 })
-export class RegisterSeriesComponent implements AfterViewInit, OnInit{
+export class RegisterSeriesComponent implements AfterViewInit, OnInit {
   movies?: Movies;
   matcher = new MyErrorStateMatcher();
- 
+  title = 'Cadastrar Série';
+
   capa: string = '';
   nome: string = '';
   estudio: string = '';
@@ -70,12 +82,13 @@ export class RegisterSeriesComponent implements AfterViewInit, OnInit{
   atualizaHora: any;
   horaDeHollywood: string = '';
   myForm: FormGroup;
-  temporadas: number = 1
+  temporadas: number = 1;
 
   constructor(
     private fb: FormBuilder,
     private movieServer: MovieServerService,
-    private rotas: Router
+    private rotas: Router,
+    private pageService: PageService
   ) {
     this.myForm = this.fb.group({
       capa: ['', [Validators.required]],
@@ -85,29 +98,26 @@ export class RegisterSeriesComponent implements AfterViewInit, OnInit{
       descricao: ['', Validators.required],
       dataLancamento: ['', Validators.required],
       nota: ['', Validators.required],
-
     });
   }
 
-
   ngAfterViewInit(): void {
-    alert("Carregando...")
+    alert('Carregando...');
     this.mostrarFormulario = true;
-    alert('Sua pagima esta rodando no localhost port 4200:')
+    alert('Sua pagina esta rodando no localhost port 4200:');
   }
 
   ngOnInit(): void {
-   
-      this.atualizaHora = setInterval(() => {
-        this.data = new Date();
-        this.horaDeHollywood = this.data.toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles' });
-      }, 1000); 
+    this.atualizaHora = setInterval(() => {
+      this.data = new Date();
+      this.horaDeHollywood = this.data.toLocaleTimeString('en-US', {
+        timeZone: 'America/Los_Angeles',
+      });
+    }, 1000);
+    this.pageService.setPageName(this.title);
   }
 
- 
-
   onSubmit() {
-   
     let serie = new series(
       this.capa,
       this.nome,
@@ -118,7 +128,7 @@ export class RegisterSeriesComponent implements AfterViewInit, OnInit{
       this.categoria,
       this.statusi,
       this.descricao,
-   this.temporadas,
+      this.temporadas
     );
     if (this.myForm.valid) {
       // Save movie data to the server
@@ -129,7 +139,7 @@ export class RegisterSeriesComponent implements AfterViewInit, OnInit{
     } else {
       alert('cachorro');
     }
-   
+
     alert('ola mundo');
   }
 
@@ -148,9 +158,7 @@ export class RegisterSeriesComponent implements AfterViewInit, OnInit{
   status = new FormControl('');
   Listadestatus: string[] = ['Assistido', 'Não Assistido', 'Desejo Assistir'];
 
-
-  Voltar(){
- this.rotas.navigate(['/movie-list'])
+  Voltar() {
+    this.rotas.navigate(['/movie-list']);
   }
- 
 }
