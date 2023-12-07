@@ -5,9 +5,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
-import { Movie } from '../movie';
 import { CommonModule } from '@angular/common';
 import { MovieService } from '../movie.service';
+import Movies from '../model/movies';
+
 
 @Component({
   selector: 'app-movie-list',
@@ -27,12 +28,17 @@ import { MovieService } from '../movie.service';
 export class MovieListComponent{
   currentPage = 'Meus Filmes';
 
-  movieList: Movie[] = [];
+  rotaMovie = '/movie-detail'
+  rotaPhoto = '/movie-detail'
+  movieList: Movies[] = [];
   movieService: MovieService = inject(MovieService);
   
   constructor() {
-    this.movieService.getAllMovies().then((movieList: Movie[]) => {
+    this.movieService.getAllMovies().then((movieList: Movies[]) => {
       this.movieList = movieList;
     });
+
   }
+
+
 }

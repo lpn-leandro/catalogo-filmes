@@ -5,24 +5,25 @@ export default class series{
     producer?: string;
     director?: string;
     releaseDate?: string;
+    nota?: number;
     gender?: string;
     check?: string;
     sinopse?: string;
-    seasons?: string;
-
+    seasons?: number;
+   
     constructor(
-        id: number,
+        
     photo: string,
     name: string,
     producer: string,
     director: string,
     releaseDate: string,
+    nota: number,
     gender: string,
     check: string,
     sinopse: string,
-    seasons: string,
+    seasons: number,
     ){
-        this.id= id;
         this.photo = photo;
         this.name = name;
         this.producer = producer;
@@ -32,5 +33,6 @@ export default class series{
         this.check = check;
         this.sinopse =sinopse;
         this.seasons =seasons;
+        this.nota = nota;
     }
 }

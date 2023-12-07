@@ -20,7 +20,7 @@ import { SerieListComponent } from './serie-list/serie-list.component';
 import { RegisterSeriesComponent } from './register-series/register-series.component';
 
 @NgModule({
-  declarations: [AppComponent, RegisterSeriesComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -39,6 +39,7 @@ import { RegisterSeriesComponent } from './register-series/register-series.compo
     MovieDetailComponent,
     SerieListComponent,
     SerieDetailComponent,
+    RegisterSeriesComponent
   ],
   providers: [],
   bootstrap: [AppComponent],

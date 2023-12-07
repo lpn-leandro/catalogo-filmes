@@ -125,9 +125,125 @@
       "sinopse": "top demais um dos melhores que ja vi",
       "nota": "87",
       "id": 17
+    },
+    {
+      "photo": "https://kanto.legiaodosherois.com.br/w760-h398-gnw-cfill-q95/wp-content/uploads/2017/10/legiao_9zdknSrIWGhlHKfYL3q0pDaogmwVZJ5b8CvQONeUxy.jpg.webp",
+      "name": "aa",
+      "producer": "aaaa",
+      "director": "aaaaaaa",
+      "releaseDate": "122132",
+      "categoria": [
+        "Ação"
+      ],
+      "status": [
+        "Não Assistido"
+      ],
+      "sinopse": "deeeeeee",
+      "nota": "55",
+      "id": 18
+    },
+    {
+      "photo": "https://cinema10.com.br/upload/series/series_2637_serie-de-the-last-of-us-3.jpg?default=poster",
+      "name": "ad",
+      "producer": "da",
+      "director": "da",
+      "releaseDate": "12/22/2025",
+      "gender": "22",
+      "check": [
+        "Drama"
+      ],
+      "sinopse": [
+        "Desejo Assistir"
+      ],
+      "seasons": "wwwww dxee",
+      "id": 19
+    },
+    {
+      "photo": "https://img.elo7.com.br/product/zoom/2A1A4BF/big-poster-filme-joker-coringa-joaquin-phoenix-lo02-90x60-cm-poster.jpg",
+      "name": "Joker",
+      "producer": "Dc",
+      "director": "Não sei",
+      "releaseDate": "01012019",
+      "categoria": [
+        "Ação",
+        "Drama"
+      ],
+      "status": [
+        "Assistido"
+      ],
+      "sinopse": "as",
+      "nota": "86",
+      "id": 20
     }
   ],
-  "series":[
-    
+  "series": [
+    {
+      "photo": "https://cinema10.com.br/upload/series/series_2637_serie-de-the-last-of-us-3.jpg?default=poster",
+      "name": "efef",
+      "producer": "ac",
+      "director": "aaaa",
+      "releaseDate": "aaaa",
+      "gender": "12",
+      "check": [
+        "Drama"
+      ],
+      "sinopse": [
+        "Não Assistido"
+      ],
+      "seasons": "cccccccccc",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "photo": "https://cinema10.com.br/upload/series/series_2637_serie-de-the-last-of-us-3.jpg?default=poster",
+      "name": "ee",
+      "producer": "eeeeeeeeeeee",
+      "director": "eeeeeeeeee",
+      "releaseDate": "12/12/33",
+      "gender": "66",
+      "check": [
+        "Ação"
+      ],
+      "sinopse": [
+        "Não Assistido"
+      ],
+      "seasons": "rgr"
+    },
+    {
+      "photo": "https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2021/06/09/loki_characterseries_loki_v2_lg.jpg",
+      "name": "Loki",
+      "producer": "Marvel",
+      "director": "Aaron Moorhead",
+      "releaseDate": "10/22/2020",
+      "gender": [
+        "Ação"
+      ],
+      "check": [
+        "Não Assistido"
+      ],
+      "sinopse": "otima serie",
+      "seasons": "",
+      "nota": "88",
+      "id": 3
+    },
+    {
+      "photo": "https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2021/06/09/loki_characterseries_loki_v2_lg.jpg",
+      "name": "Loki",
+      "producer": "Marvel",
+      "director": "Aaron Moorhead",
+      "releaseDate": "12/13/2020",
+      "gender": [
+        "Suspense",
+        "Ação",
+        "Drama"
+      ],
+      "check": [
+        "Desejo Assistir"
+      ],
+      "sinopse": "top pelo que todo mundo tem me falado",
+      "seasons": 2,
+      "nota": 87,
+      "id": 4
+    }
   ]
 }
