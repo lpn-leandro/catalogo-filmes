@@ -20,4 +20,5 @@ import series from '../model/series';
 export class ItemCardComponent {
   @Input() movie!: Movies;
   @Input() serie!: series;
+
 }
