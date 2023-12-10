@@ -12,7 +12,7 @@
   </button>
 </mat-menu>
 
-<a class="a" [routerLink]="[movie? '/movie-detail' : '/serie-detail', movie?movie.id : serie.id]">
+<a class="a" [routerLink]="[movie ? '/movie-detail' : '/serie-detail', movie ? movie.id : serie.id]">
   <mat-card class="my-card">
     <img class="image" mat-card-image [src]="movie? movie.photo : serie.photo" />
     <mat-card-header class="header">

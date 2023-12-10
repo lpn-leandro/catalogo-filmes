@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 import { SerieService } from '../serie.service';
 import Movies from '../model/movies';
 import Series from '../model/series';
+import { PageService } from '../page.service';
 
 @Component({
   selector: 'app-serie-list',
@@ -27,12 +28,16 @@ import Series from '../model/series';
   ],
 })
 export class SerieListComponent {
-  currentPage = 'Meus Filmes';
-
+  title = 'Séries';
   serieList: Series[] = [];
-  serieService: SerieService = inject(SerieService);
 
-  constructor() {
+  constructor(private serieService: SerieService,
+    private pageService: PageService) {
+    
+  }
+
+  ngOnInit(): void {
+    this.pageService.setPageName(this.title);
     this.serieService.getAllSeries().then((serieList: Series[]) => {
       this.serieList = serieList;
     });

@@ -10,6 +10,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import series from '../model/series';
+import { PageService } from '../page.service';
 
 @Component({
   selector: 'app-serie-detail',
@@ -30,11 +31,17 @@ export class SerieDetailComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
   serieService = inject(SerieService);
   serie: series | undefined;
+  title: string | undefined;
 
-  constructor() {
+  constructor(private pageService: PageService) {
+  }
+
+  ngOnInit(){
     const serieId = parseInt(this.route.snapshot.params['id'], 10);
     this.serieService.getSerieById(serieId).then((serie) => {
       this.serie = serie;
+      this.title = serie?.name;
+      this.pageService.setPageName(this.title || '');
     });
   }
 }
