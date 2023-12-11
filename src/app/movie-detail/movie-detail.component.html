@@ -19,7 +19,7 @@
           <mat-divider></mat-divider>
           <div matListItemTitle>Data de Lançamento</div>
           <mat-list-item>
-            <div matListItemLine>{{ movie?.releaseDate }}</div>
+            <div matListItemLine>{{ movie?.releaseDate | date:'longDate'}}</div>
           </mat-list-item>
 
           <mat-divider></mat-divider>

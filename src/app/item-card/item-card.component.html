@@ -16,7 +16,7 @@
   <mat-card class="my-card">
     <img class="image" mat-card-image [src]="movie? movie.photo : serie.photo" />
     <mat-card-header class="header">
-      <mat-card-title class="title">{{ movie? movie.name : serie.name}}</mat-card-title>
+      <mat-card-title class="title">{{ movie? movie.name : serie.name | titlecase}}</mat-card-title>
       <mat-card-subtitle class="subtitle">{{
         movie? movie.producer : serie.producer
       }}</mat-card-subtitle>
