@@ -174,6 +174,23 @@
       "sinopse": "as",
       "nota": "86",
       "id": 20
+    },
+    {
+      "photo": "https://capas-p.imagemfilmes.com.br/164847_000_p.jpg",
+      "name": "cedc",
+      "producer": "cccc",
+      "director": "cc",
+      "releaseDate": "12/22/23",
+      "categoria": [
+        "Ação",
+        "Drama"
+      ],
+      "status": [
+        "Não Assistido"
+      ],
+      "sinopse": "vefv",
+      "nota": "80",
+      "id": 21
     }
   ],
   "series": [
@@ -244,6 +261,23 @@
       "seasons": 2,
       "nota": 87,
       "id": 4
+    },
+    {
+      "photo": "https://capas-p.imagemfilmes.com.br/164847_000_p.jpg",
+      "name": "cd",
+      "producer": "dc",
+      "director": "fd",
+      "releaseDate": "frc",
+      "gender": [
+        "Suspense"
+      ],
+      "check": [
+        "Assistido"
+      ],
+      "sinopse": "cdddddddd",
+      "seasons": 1,
+      "nota": 98,
+      "id": 5
     }
   ]
 }
