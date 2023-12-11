@@ -14,11 +14,11 @@
 
 <a class="a" [routerLink]="[movie ? '/movie-detail' : '/serie-detail', movie ? movie.id : serie.id]">
   <mat-card class="my-card">
-    <img class="image" mat-card-image [src]="movie? movie.photo : serie.photo" />
+    <img class="image" mat-card-image [src]="movie? movie.photo : serie.photo | titlecase" />
     <mat-card-header class="header">
-      <mat-card-title class="title">{{ movie? movie.name : serie.name}}</mat-card-title>
+      <mat-card-title class="title">{{ movie? movie.name : serie.name | titlecase}}</mat-card-title>
       <mat-card-subtitle class="subtitle">{{
-        movie? movie.producer : serie.producer
+        movie? movie.producer : serie.producer | titlecase
       }}</mat-card-subtitle>
     </mat-card-header>
   </mat-card>
