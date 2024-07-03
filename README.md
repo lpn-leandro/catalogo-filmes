@@ -1,3 +1,7 @@
+---
+permalink: /index.html
+---
+
 # WatchZa-angular
 
 Este projeto tem como objetivo implementar um registro de filmes assistidos pelo respectivo usuário
