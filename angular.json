@@ -90,5 +90,11 @@
   },
   "cli": {
     "analytics": "f20b4119-a4a2-4fd6-bf13-5e11c2d8dada"
+  },
+  "deploy": {
+    "builder": "angular-cli-ghpages:deploy",
+    "options": {
+      "buildTarget": "test:build:production"
+    }
   }
 }
